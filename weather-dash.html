@@ -2,21 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <!-- Retrieved data will go here -->
-    <div class="temperature"></div>
-    <div class="humidity"></div>
-    <div class="wind speed"></div>
-    <div class="UV Index"></div>
-    <div class="5-day Forecast"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type=text/javascript>
+  <div class="jumbotron jumbotron-fluid p-3 mb-2 bg-primary text-white text-center">
+    <div class="container"></div>
+      <h1 class="display-4">Weather Dashboard</h1>
+      <p class="lead">Stay up-to-date on your weather forecast</p>
+    </div>
+  </div>
+
+  <!-- Retrieved data will go here -->
+  <div class="temperature"></div>
+  <div class="humidity"></div>
+  <div class="wind speed"></div>
+  <div class="UV Index"></div>
+  <div class="5-day Forecast"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type=text/javascript>
 
         // This is my API key
         var APIKey = "e2430c230d3e4cfb83bfa51840a196d3";
@@ -55,9 +68,10 @@
         // console.log("Humidity: " + response.main.humidity);
         // console.log("Temperature (F): " + tempF);
       });
-    
-    
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </script>
 </body>
 
 </html>

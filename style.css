@@ -1,0 +1,10 @@
+.leadfont {
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+
+.headings {
+    font-weight: bolder;
+    font-size: x-large;
+}

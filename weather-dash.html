@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
@@ -16,20 +17,104 @@
 
   <div class="jumbotron jumbotron-fluid p-3 mb-2 bg-primary text-white text-center">
     <div class="container"></div>
-      <h1 class="display-4">Weather Dashboard</h1>
-      <p class="lead">Stay up-to-date on your weather forecast</p>
-    </div>
+    <h1 class="display-4">Weather Dashboard</h1>
+    <p class="lead">Stay up-to-date on your weather forecast</p>
+  </div>
   </div>
 
-  <!-- Retrieved data will go here -->
-  <div class="temperature"></div>
-  <div class="humidity"></div>
-  <div class="wind speed"></div>
-  <div class="UV Index"></div>
-  <div class="5-day Forecast"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="input-group mb-3">
+          <form id="city-form">
+            <label for="city-input">What city's weather forecast would you like?</label>
+            <input type="text" id="city-input">
+            <br>
+            <br>
+            <button class="btn btn-primary" type="submit">search</button>
+            <br>
+            <br>
+            <ul class="list-group">
+              <li class="list-group-item">Austin</li>
+              <li class="list-group-item">Chicago</li>
+              <li class="list-group-item">New York</li>
+              <li class="list-group-item">Orlando</li>
+              <li class="list-group-item">San Francisco</li>
+              <li class="list-group-item">Seattle</li>
+              <li class="list-group-item">Denver</li>
+              <li class="list-group-item">Atlanta</li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4 leadfont">Here is your city's forecast: </h1>
+            <br>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type=text/javascript>
+            <!-- Retrieved data will go here -->
+            <div class="temperature"><b>Temperature: </b></div><br>
+            <div class="humidity"><b>Humidity: </b></div><br>
+            <div class="wind speed"><b>Wind speed: </b></div><br>
+            <div class="UV Index"><b>UV Index: </b></div><br>
+            <div class="5-day Forecast leadfont headings">5-day Forecast:</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header"><b>Monday</b></div>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Temp: </h5>
+                <h5 class="card-title">Humidity: </h5>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header"><b>Tuesday</b></div>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Temp: </h5>
+                <h5 class="card-title">Humidity: </h5>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header"><b>Wednesday</b></div>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Temp: </h5>
+                <h5 class="card-title">Humidity: </h5>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header"><b>Thursday</b></div>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Temp: </h5>
+                <h5 class="card-title">Humidity: </h5>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header"><b>Friday</b></div>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Temp: </h5>
+                <h5 class="card-title">Humidity: </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type=text/javascript>
 
         // This is my API key
         var APIKey = "e2430c230d3e4cfb83bfa51840a196d3";
@@ -69,9 +154,9 @@
         // console.log("Temperature (F): " + tempF);
       });
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </script>
 </body>
 
 </html>

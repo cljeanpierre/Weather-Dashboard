@@ -19,14 +19,13 @@ function currentWeather(cityInput){
         console.log(results.wind.speed);
 
         var content = 
-        `<h1>Temperature = ${results.main.temp}</h1>
-        <h1>Humidity = ${results.main.humidity}</h1>
-        <h1>Wind Speed = ${results.wind.speed}</h1>`;
+        `<h4>Temperature = ${results.main.temp}</h4>
+        <h4>Humidity = ${results.main.humidity}</h4>
+        <h4>Wind Speed = ${results.wind.speed}</h4>`;
 
 
         $("#currentTempHumWin").html(content);
-        forecast(cityInput);
-        uvIndex(lat,lon);
+        // forecast(cityInput);
         // uvIndex(results.coord.lat, results.coord.lon)
 
 
@@ -40,10 +39,13 @@ function forecast(cityInput){
     }).then(function(results){
         console.log(results);
         for (var i = 0; i < results.length; i+=8);
-        var fiveDays = 
+        
+        var fiveDays = `<span id="monTemp"> ${results.list.dt_txt}</span>`;
+
+        $("#monTemp").html(fiveDays);
     })
     
-}
+});
 
 function uvIndex(lat, lon){
 //set lat, lon = cityInput
@@ -101,3 +103,5 @@ $(document).ready(function () {
 
     });
 });
+  
+}); 

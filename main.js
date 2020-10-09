@@ -26,6 +26,7 @@ function currentWeather(cityInput){
 
         $("#currentTempHumWin").html(content);
         forecast(cityInput);
+        uvIndex(lat,lon);
         // uvIndex(results.coord.lat, results.coord.lon)
 
 
@@ -38,12 +39,14 @@ function forecast(cityInput){
         url: queryForecast + cityInput
     }).then(function(results){
         console.log(results);
+        for (var i = 0; i < results.length; i+=8);
+        var fiveDays = 
     })
     
 }
 
 function uvIndex(lat, lon){
-
+//set lat, lon = cityInput
 }
 
 
@@ -51,12 +54,13 @@ $(document).ready(function () {
     
     $('#city-form').on('submit', function (event) {
         event.preventDefault();
-        console.log("this button has been clicked")
+        console.log("This button has been clicked")
         var cityInput = $('#city-input').val()
         console.log(cityInput)
         $('#citylist').append(`<li class="list-group-item">${cityInput}</li>`)
 
         currentWeather(cityInput);
+    
         
         // // Run AJAX call to the OpenWeatherMap API
         // $.ajax({

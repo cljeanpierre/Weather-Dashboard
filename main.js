@@ -45,7 +45,7 @@ function forecast(cityInput){
         $("#monTemp").html(fiveDays);
     })
     
-});
+};
 
 function uvIndex(lat, lon){
 //set lat, lon = cityInput
@@ -62,6 +62,7 @@ $(document).ready(function () {
         $('#citylist').append(`<li class="list-group-item">${cityInput}</li>`)
 
         currentWeather(cityInput);
+        forecast(cityInput);
     
         
         // // Run AJAX call to the OpenWeatherMap API
@@ -104,4 +105,3 @@ $(document).ready(function () {
     });
 });
   
-}); 

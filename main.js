@@ -40,9 +40,16 @@ function forecast(cityInput){
         console.log(results);
         for (var i = 0; i < results.length; i+=8);
         
-        var fiveDays = `<span id="monTemp"> ${results.list.dt_txt}</span>`;
+        var fiveDays = 
+        `<span id="monTemp"> ${results.list[i].main.temp}</span>
+        <span id="monHum"> ${results.list[i].main.humidity}</span>`;
+
+        console.log("fiveDays: ", fiveDays);
+        console.log("results.list: ", results.list);
+        console.log("results.list[i].main.temp: ", results.list[i].main.temp);
 
         $("#monTemp").html(fiveDays);
+        $("#monHum").html(fiveDays);
     })
     
 };
@@ -64,44 +71,7 @@ $(document).ready(function () {
         currentWeather(cityInput);
         forecast(cityInput);
     
-        
-        // // Run AJAX call to the OpenWeatherMap API
-        // $.ajax({
-        //     url: queryURL + cityInput,
-        //     method: "GET"
-        // })
-        // $.ajax({
-        //     url: queryForecast + cityInput,
-        //     method: "GET"
-        // })
-        // $.ajax({
-        //     url: queryIndex + cityInput,
-        //     method: "GET"
-        // })
-        //     // Store all of the retrieved data inside of an object called "results"
-        //     .then(function (results) {
-        //         console.log(results);
-        //         var initialResults = results.response.docs;
-        //         console.log(initialResults);
-        //         for (var i = 0; i < initialResults.length; i++) {
-        //             var articleDiv = $("<div>");
-        //             var h = $("<h3>").text(results[i].main);
-        //             console.log(h);
-        //             articleDiv.append(h);
-        //             $("#city-input").append (articleDiv);
-        //         }
 
-        //         // // Transfer content to HTML
-        //         // $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-        //         // $(".wind").text("Wind Speed: " + response.wind.speed);
-        //         // $(".humidity").text("Humidity: " + response.main.humidity);
-
-        //         // Log the data in the console as well
-        //         // console.log("Wind Speed: " + response.wind.speed);
-        //         // console.log("Humidity: " + response.main.humidity);
-        //         // console.log("Temperature (F): " + tempF);
-        //     });
 
     });
 });
-  

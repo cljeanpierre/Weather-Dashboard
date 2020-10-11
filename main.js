@@ -45,22 +45,21 @@ function forecast(cityInput) {
     }).then(function (results) {
         console.log("RESULTS: ", results);
         console.log("RESULTS.LENGTH: ", results.list.length);
-        for (var i = 0; i < results.list.length; i += 8) {
 
-            var fiveDaysTemp = `<span> ${results.list[i].main.temp}</span>`;
-            var fiveDaysHum = `<span> ${results.list[i].main.humidity}</span>`;
-            var tuesdayTemp = `<span> ${results.list[i].main.temp}</span>`;
-            var tuesdayHum = `<span> ${results.list[i].main.humidity}</span>`;
-            var wedTemp = `<span> ${results.list[i].main.temp}</span>`
-            var wedHum = `<span> ${results.list[i].main.humidity}</span>`
-            var thursTemp = `<span> ${results.list[i].main.temp}</span>`
-            var thursHum = `<span> ${results.list[i].main.humidity}</span>`
-            var friTemp = `<span> ${results.list[i].main.temp}</span>`
-            var friHum = `<span> ${results.list[i].main.humidity}</span>`
+            var fiveDaysTemp = `<span> ${results.list[0].main.temp}</span>`;
+            var fiveDaysHum = `<span> ${results.list[0].main.humidity}</span>`;
+            var tuesdayTemp = `<span> ${results.list[8].main.temp}</span>`;
+            var tuesdayHum = `<span> ${results.list[8].main.humidity}</span>`;
+            var wedTemp = `<span> ${results.list[16].main.temp}</span>`
+            var wedHum = `<span> ${results.list[16].main.humidity}</span>`
+            var thursTemp = `<span> ${results.list[24].main.temp}</span>`
+            var thursHum = `<span> ${results.list[24].main.humidity}</span>`
+            var friTemp = `<span> ${results.list[32].main.temp}</span>`
+            var friHum = `<span> ${results.list[32].main.humidity}</span>`
     
             console.log("fiveDays: ", fiveDaysTemp);
             console.log("results.list: ", results.list);
-            console.log("results.list[i].main.temp: ", results.list[i].main.temp);
+            console.log("results.list[24].main.temp: ", results.list[24].main.temp);
             console.log("HERE", $("#monTemp"))
     
             $("#monTemp").html(fiveDaysTemp);
@@ -73,7 +72,7 @@ function forecast(cityInput) {
             $("#thursHum").html(thursHum);
             $("#friTemp").html(friTemp);
             $("#friHum").html(friHum);
-        }
+        
 
 
     })

@@ -97,6 +97,7 @@ $(document).ready(function () {
 
         currentWeather(cityInput);
         forecast(cityInput);
+        tempConvert(temperature);
 
 
 

@@ -24,9 +24,10 @@ function currentWeather(cityInput) {
         <h4>Humidity = ${results.main.humidity}</h4>
         <h4>Wind Speed = ${results.wind.speed}</h4>`;
 
-        function tempConvert() {
-            var kelvin = Temperature;
-            var celsius = Temperature - 273;
+        var temperature = results.main.temp
+        function tempConvert(temperature) {
+            var kelvin = temperature;
+            var celsius = temperature - 273;
             var fahrenheit = Math.floor(celsius * (9 / 5) + 32);
             console.log(tempConvert);
         }
@@ -38,6 +39,7 @@ function currentWeather(cityInput) {
 
     })
 }
+
 function forecast(cityInput) {
     $.ajax({
         type: "GET",

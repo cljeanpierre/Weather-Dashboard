@@ -4,3 +4,5 @@ This application retrieves data from another application's API and allows users 
 
 # Review
 
+<img src="assets/Weather Dashboard.png"  alt="Weather Dashboard Screenshot">
+
